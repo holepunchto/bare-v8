@@ -48,11 +48,11 @@ bare_v8_heap_space_statistics(js_env_t *env, js_callback_info_t *info) {
   int err;
 
   size_t len;
-  err = js_get_heap_space_statistics(env, NULL, 0, &len);
+  err = js_get_heap_space_statistics(env, NULL, 0, 0, &len);
   assert(err == 0);
 
   js_heap_space_statistics_t *statistics = malloc(len * sizeof(js_heap_space_statistics_t *));
-  err = js_get_heap_space_statistics(env, statistics, len, NULL);
+  err = js_get_heap_space_statistics(env, statistics, len, 0, NULL);
   assert(err == 0);
 
   js_value_t *result;
