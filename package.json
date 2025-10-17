@@ -1,6 +1,6 @@
 {
   "name": "bare-v8",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "V8 utilities for Bare",
   "exports": {
     "./package": "./package.json",
